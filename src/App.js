@@ -11,43 +11,18 @@ import { faCheckSquare, faHeart } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faCheckSquare, faHeart)
 
-function App() {
+function App(props) {
 
-  let dialogs = [
-    { id: 1, name: "Oleg Sadykov" },
-    { id: 2, name: "Alexandra Sadykova" },
-    { id: 3, name: "Vladislav Stoma" },
-    { id: 4, name: "Vladislava Leontieva" },
-    { id: 5, name: "Kirill Demchenko" },
-]
-
-let messages = [
-  { id: 1, message: "Hello world" },
-  { id: 2, message: "How are you?" },
-  { id: 3, message: "What time is it now?" },
-  { id: 4, message: "Great game, thanks!" },
-  { id: 5, message: "I love you!!!" }
-]
-
-let posts = [
-  {id: 1, postText: "My first message", likesCount: "26"},
-  {id: 1, postText: "My second message", likesCount: "52"},
-  {id: 1, postText: "Another message", likesCount: "10"},
-  {id: 1, postText: "Another one message", likesCount: "15"},
-]
-
-
+  
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navbar />
         <div className="app-wrapper__content">
-          <Route path='/profile' render={() =>  <Profile posts={posts}/>} />
-          <Route path='/dialogs' render={() =>  <Dialogs dialogs={dialogs} messages={messages}/>} />
+          <Route path='/profile' render={() => <Profile addPost = {props.addPost} state = {props.appState} />} />
+          <Route path='/dialogs' render={() => <Dialogs state = {props.appState} />} />
         </div>
-
-
       </div>
     </BrowserRouter>
   );
