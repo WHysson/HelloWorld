@@ -1,0 +1,18 @@
+.header {
+    border-radius: 0 0 5px 5px;
+    grid-area: header;
+    background-color: #112233;
+
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "logo content"
+    ;
+}
+
+.header img {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+}

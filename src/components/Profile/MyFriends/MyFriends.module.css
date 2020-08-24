@@ -1,0 +1,39 @@
+.content {
+    background-color: #112233;
+    margin: 20px 0;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+
+    grid-area: avatar;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 5px 1fr;
+    grid-template-areas: 
+        "heading heading heading"
+        "hr hr hr"
+        "friends friends friends"
+    ;
+}
+
+.content hr {
+    grid-area: hr;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.content__heading {
+    grid-area: heading;
+}
+
+.content__items {
+    grid-area: friends;
+
+    text-align: center;
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+}

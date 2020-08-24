@@ -1,0 +1,22 @@
+.nav {
+    grid-area: nav;
+    background-color: #112233;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.nav a {
+    display: block;
+    text-decoration: none;
+    color: #66CC99;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #c2d1ca;
+}
+
+.nav a:focus {
+    color: #44BBFF;
+}
