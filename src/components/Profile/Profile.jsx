@@ -26,7 +26,7 @@ function Profile(props) {
           <p>Family status: Single</p>
         </div>
       </div>
-      <MyPosts addPost={props.addPost} state={props.state}/>
+      <MyPosts updateNewPostText = {props.updateNewPostText} addPost={props.addPost} state={props.state}/>
 
     </div>
   );

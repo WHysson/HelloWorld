@@ -4,7 +4,7 @@
     background-color: #F0F1F5;
     display: grid;
     grid-template-columns: 3fr 9fr;
-    grid-template-rows: 3fr 9fr;
+    grid-template-rows: 400px 9fr;
     grid-template-areas: 
     "avatar description"
     "avatar wall";
@@ -27,6 +27,7 @@
 .description {
     grid-area: description;
     vertical-align: top;
+    padding: 50px;
 }
 hr {
     width: 70%;

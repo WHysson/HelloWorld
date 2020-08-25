@@ -10,17 +10,18 @@ function MyPosts(props) {
   let postMessage = React.createRef()
 
   let addPost = () => {
-    let postText = postMessage.current.value
-    props.addPost(postText)
-    
-          
+    props.addPost()      
   }
 
+  let onPostChange = () => {
+    props.updateNewPostText(postMessage.current.value)
+    
+  }
   return (
     <div className={style.content}>
       <div className={style.addPost}>
         <h2>My Posts</h2>
-        <input id="addPost__textarea" ref={postMessage} className={style.addPost__input} type="text" placeholder="Write something" name="uname" />
+        <input onChange={onPostChange} value={props.state.profilePage.newPostText} id="addPost__textarea" ref={postMessage} className={style.addPost__input} type="text" placeholder="Write something" name="uname" />
         <button onClick={addPost} className={style.addPost__button}>Add post</button>
       </div>
 
@@ -30,6 +31,7 @@ function MyPosts(props) {
 
     </div>
   );
+
 }
 
 export default MyPosts;

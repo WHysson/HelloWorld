@@ -20,7 +20,7 @@ function App(props) {
         <Header />
         <Navbar />
         <div className="app-wrapper__content">
-          <Route path='/profile' render={() => <Profile addPost = {props.addPost} state = {props.appState} />} />
+          <Route path='/profile' render={() => <Profile updateNewPostText = {props.updateNewPostText} addPost = {props.addPost} state = {props.appState} />} />
           <Route path='/dialogs' render={() => <Dialogs state = {props.appState} />} />
         </div>
       </div>
