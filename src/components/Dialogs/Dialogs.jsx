@@ -22,7 +22,7 @@ function Dialogs(props) {
                 <div className={style.messages}>
                     {messageElements}
 
-                    <SendMessageForm/>
+                    <SendMessageForm state = {props.state} sendMessage = {props.sendMessage} updateNewMessageText={props.updateNewMessageText}/>
                 </div>
             </div>
         </div>

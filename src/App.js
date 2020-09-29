@@ -12,8 +12,7 @@ import { faCheckSquare, faHeart } from '@fortawesome/free-solid-svg-icons'
 library.add(fab, faCheckSquare, faHeart)
 
 function App(props) {
-
-  
+    
   return (
  
       <div className="app-wrapper">
@@ -21,7 +20,7 @@ function App(props) {
         <Navbar />
         <div className="app-wrapper__content">
           <Route path='/profile' render={() => <Profile updateNewPostText = {props.updateNewPostText} addPost = {props.addPost} state = {props.appState} />} />
-          <Route path='/dialogs' render={() => <Dialogs state = {props.appState} />} />
+          <Route path='/dialogs' render={() => <Dialogs sendMessage = {props.sendMessage} updateNewMessageText = {props.updateNewMessageText} state = {props.appState} />} />
         </div>
       </div>
  
