@@ -6,11 +6,11 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
-let rerenderEntireTree = () => {
+let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
       <React.StrictMode>
-        <App sendMessage={store.sendMessage.bind(store)} updateNewMessageText={store.updateNewMessageText.bind(store)} updateNewPostText = {store.updateNewPostText.bind(store)} addPost={store.addPost.bind(store)} appState={store.getState()} />
+        <App dispatch = {store.dispatch.bind(store)} state = {state} />
       </React.StrictMode>,
       </BrowserRouter>,
     document.getElementById('root')

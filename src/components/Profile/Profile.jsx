@@ -4,7 +4,6 @@ import MyPosts from './MyPosts/MyPosts';
 import MyFriends from './MyFriends/MyFriends';
 
 function Profile(props) {
-
   return (
     <div className={style.content}>
       <div className={style.avatar}>
@@ -24,7 +23,7 @@ function Profile(props) {
           <p>Family status: Single</p>
         </div>
       </div>
-      <MyPosts updateNewPostText={props.updateNewPostText} addPost={props.addPost} state={props.state} />
+      <MyPosts dispatch = {props.dispatch} state={props.state} />
 
     </div>
   );
