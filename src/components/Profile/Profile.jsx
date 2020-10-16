@@ -4,6 +4,7 @@ import MyPosts from './MyPosts/MyPosts';
 import MyFriends from './MyFriends/MyFriends';
 
 function Profile(props) {
+  
   return (
     <div className={style.content}>
       <div className={style.avatar}>

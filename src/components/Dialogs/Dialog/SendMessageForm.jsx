@@ -1,17 +1,17 @@
 import React from 'react'
+import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../../redux/dialogsReducer';
 import style from './../Dialogs.module.css'
 
 
 function SendMessageForm(props) {
-
     let textMessage = React.createRef();
 
     let sendMessage = () => {
-        props.sendMessage()
+       props.dispatch(sendMessageActionCreator())
     }
 
     let onMessageChange = () => {
-        props.updateNewMessageText(textMessage.current.value)
+        props.dispatch(updateNewMessageTextActionCreator(textMessage.current.value))
         console.log(props.state.messagesPage.newMessageText)
     }
 

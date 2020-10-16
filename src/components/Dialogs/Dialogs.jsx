@@ -5,7 +5,7 @@ import MessageItem from './Message/MessageItem'
 import SendMessageForm from './Dialog/SendMessageForm'
 
 function Dialogs(props) {
-  
+    
     let dialogsElements = props.state.messagesPage.dialogsItems.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)
 
    
@@ -22,7 +22,7 @@ function Dialogs(props) {
                 <div className={style.messages}>
                     {messageElements}
 
-                    <SendMessageForm state = {props.state} sendMessage = {props.sendMessage} updateNewMessageText={props.updateNewMessageText}/>
+                    <SendMessageForm state = {props.state} dispatch = {props.dispatch}/>
                 </div>
             </div>
         </div>
